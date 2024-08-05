@@ -1,5 +1,7 @@
 var swiper = new Swiper('.view-product', {
     speed: 600,
+    slidesPerView: 2,
+    spaceBetween: 10,
     grabCursor: true,
     autoplay: {
         delay: 5000,

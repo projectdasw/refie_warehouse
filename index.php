@@ -11,7 +11,7 @@
             </div>
             <ul>
                 <li>
-                    <a href="../warehouse_apps/">
+                    <a href="/refie_warehouse/">
                         <i class="fa-solid fa-house"></i>
                         <span>Beranda</span>
                     </a>
