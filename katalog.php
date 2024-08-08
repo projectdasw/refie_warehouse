@@ -1,4 +1,4 @@
-<div class="product-cat">
+<div class="product-cat kanit-regular">
     <div class="product-cat-container">
         <div class="product-cat-sidebar">
             <div class="product-cat-countlist">
@@ -80,10 +80,10 @@
                         <div class="latest-img">
                             <img src="gambar-barang/<?php echo $ft; ?>" alt="image" loading="lazy" />
                         </div>
-                        <div class="product-cat-desc">
-                            <h2 class="product-cat-name">
+                        <div class="product-cat-desc mt-3">
+                            <h6 class="product-cat-name">
                                 <?php echo $nm; ?>
-                            </h2>
+                            </h6>
                             <strong class="product-cat-price">
                                 <?php echo "Rp. ".$hrg; ?>
                             </strong>

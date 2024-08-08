@@ -14,7 +14,7 @@
     else{
 ?>
 <?php include_once("templates/header_dashboard.php")?>
-    <div class="dashboard-container">
+    <div class="dashboard-container kanit-regular">
         <aside class="menu-aside">
             <div class="logo-img">
                 <img src="assets/img/logo/refie_logo.png" alt="REFIE Logo">

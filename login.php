@@ -11,7 +11,7 @@
     else{
 ?>
 <?php include_once("templates/header_login.php")?>
-    <form method="POST" action="inc/process.php" class="login-form" autocomplete="off">
+    <form method="POST" action="inc/process.php" class="login-form kanit-regular" autocomplete="off">
         <fieldset>
             <img src="assets/img/logo/refie_logo.png" alt="REFIE Logo">
             <?php
@@ -26,7 +26,7 @@
                 session_destroy();
             ?>
             <div class="form-content">
-                <h2>LOGIN</h2>
+                <h4>LOGIN</h4>
                 <div class="form-group">
                     <div class="icon-form">
                         <i class="fa-solid fa-user"></i>
@@ -58,5 +58,5 @@
             </div>
         </fieldset>
     </form>
-    <?php } ?>
+<?php } ?>
 <?php include_once("templates/footer_login.php")?>

@@ -1,8 +1,8 @@
-var swiper = new Swiper('.view-product', {
+var swiper = new Swiper('.main-slide', {
     speed: 600,
-    slidesPerView: 2,
-    spaceBetween: 10,
     grabCursor: true,
+    slidesPerView : "auto",
+    spaceBetween: 1000,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
@@ -14,13 +14,13 @@ var swiper = new Swiper('.view-product', {
     },
 });
 
-var swiper = new Swiper(".view-category-container", {
+var swiper = new Swiper(".category-slide", {
     effect: "coverflow",
     grabCursor: true,
     speed: 900,
     loop: true,
     autoplay: {
-        delay: 10000,
+        delay: 8000,
         disableOnInteraction: false,
     },
     centeredSlides: true,
@@ -42,10 +42,10 @@ var swiper = new Swiper(".view-category-container", {
     },
 });
 
-var swiper = new Swiper(".latest-container", {
+var swiper = new Swiper(".new-product", {
     speed: 1500,
     grabCursor: true,
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
     loop: true,
     autoplay: {
@@ -66,8 +66,8 @@ var swiper = new Swiper(".pop-up-content", {
   effect: "cards",
   grabCursor: true,
   loop: true,
-  // autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  // },
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
 });

@@ -83,7 +83,7 @@
 <div class="display-product">
     <div class="product-header">
         <figcaption>
-            <h1>Daftar Produk</h1>
+            <h4>Daftar Produk</h4>
             <cite>
                 REFIE SPORT & FASHION
             </cite>
@@ -140,7 +140,7 @@
             ?>
             <div class="product-card">
                 <div class="product-title">
-                    <h2><?php echo $nm; ?></h2>
+                    <h5><?php echo $nm; ?></h5>
                     <cite>Kategori : <?php echo $cat; ?></cite>
                 </div>
                 <div class="product-img">
