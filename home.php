@@ -66,6 +66,7 @@
     <div class="swiper-button-prev"></div>
 </div>
 <div class="container-fluid p-0">
+    
     <div class="card new-product border border-0 py-3 swiper">
         <div class="card-header">
             <h3 class="kanit-semibold">
@@ -83,24 +84,26 @@
                     $cat = $result['kategori'];
                     $hrg = $result['harga'];
             ?>
-                <div class="card swiper-slide">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="gambar-barang/<?php echo $ft; ?>"
-                            class="img-fluid rounded-start" alt="image" lazy="true">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title kanit-medium">
-                                    <?php echo $nm; ?>
-                                </h5>
-                                <p class="kanit-regular">
-                                    Kategori : <?php echo $cat; ?>
-                                    <br />
-                                    Harga : <?php echo $hrg; ?>
-                                </p>
-                            </div>
-                        </div>
+                <div class="card h-100 swiper-slide">
+                    <img src="gambar-barang/<?php echo $ft; ?>"
+                    class="card-img-top" alt="image" lazy="true">
+                    <div class="card-body">
+                        <h5 class="card-title fs-6 kanit-regular">
+                            <?php echo $nm; ?>
+                        </h5>
+                        <p class="card-text">
+                            Kategori : <?php echo $cat; ?>
+                            <br />
+                            Harga : <?php echo $hrg; ?>
+                            <a href="index.php?detail-barang=<?php echo $nm; ?>" class="btn btn-primary mt-2">
+                                Lihat Barang
+                            </a>
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">
+                            REFIE Sport & Fashion
+                        </small>
                     </div>
                 </div>
             <?php } ?>
@@ -141,37 +144,3 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-pagination"></div>
 </div>
-<!-- <div class="view-category">
-    <div class="view-category-bg">
-        <img src="assets/img/young-man-is-jumping-parkour-urban-space-sporting-activity.jpg" alt="image">
-    </div>
-    <div class="view-category-container swiper"
-        style="--swiper-pagination-color: #fff;">
-        <div class="view-category-list swiper-wrapper">
-            <?php
-                $query = "select * from kategori";
-                $sql = mysqli_query($conn, $query);
-
-                while($result = mysqli_fetch_assoc($sql)){
-                    $id = $result['id_kategori'];
-                    $nm = $result['nama_kategori'];
-            ?>
-            <div class="card-cat swiper-slide">
-                <div class="card-cat-img">
-                    <img src="assets/img/logo/refie_logo.png" alt="image">
-                </div>
-                <div class="card-cat-desc">
-                    <h2><?php echo $nm; ?></h2>
-                    <button class="btn" onclick="location.href='index.php?katalog=katalog.php'">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                        Lihat Katalog
-                    </button>
-                </div>
-            </div>
-            <?php } ?>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-</div> -->
