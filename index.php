@@ -95,6 +95,9 @@
                 if(isset($_GET['katalog'])){
                     require_once "katalog.php";;
                 }
+                else if(isset($_GET['detail-barang'])){
+                    require_once "detail-barang.php";;
+                }
                 else{
                     require_once "home.php";    
                 }
