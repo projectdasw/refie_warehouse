@@ -65,6 +65,11 @@
                     <title>Katalog - REFIE Sport & Fashion</title>
                 ";
             }
+            elseif(isset($_GET['detail-barang'])){
+                echo "
+                    <title>Detail Barang - REFIE Sport & Fashion</title>
+                ";
+            }
             else{
                 echo "
                     <title>REFIE Sport & Fashion</title>
