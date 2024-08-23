@@ -45,7 +45,7 @@ var swiper = new Swiper(".category-slide", {
 var swiper = new Swiper(".new-product", {
     speed: 1500,
     grabCursor: true,
-    slidesPerView: 2,
+    slidesPerView: 5,
     spaceBetween: 30,
     loop: true,
     autoplay: {
