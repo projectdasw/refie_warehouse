@@ -1,5 +1,8 @@
 <?php
-    include 'inc/connect.php';
+    date_default_timezone_set('Asia/Jakarta');
+    setlocale(LC_ALL, 'id-ID', 'id_ID');
+    
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +43,10 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
         <!-- DATATABLE CSS -->
 
+        <!-- SWEETALERT2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css">
+        <!-- SWEETALERT2 -->
+
         <!-- JS CORE -->
         <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -54,6 +61,10 @@
         <!-- DATATABLE JS -->
         <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
         <!-- DATATABLE JS -->
+
+        <!-- SWEETALERT2 -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js"></script>
+        <!-- SWEETALERT2 -->
         <?php
             if(isset($_GET['barang'])){
                 echo "<title>REFIE - Barang</title>";
@@ -82,3 +93,23 @@
         ?>
     </head>
     <body>
+        <?php
+            require_once "inc/connect.php";
+            if(!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)
+            {
+        ?>
+        <script>
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Silahkan Login terlebih dahulu",
+                confirmButtonColor: "#d33",
+                confirmButtonText: "OK",
+                backdrop: "rgb(99, 29, 139)"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = 'login.php';
+                }
+            });
+        </script>
+    <?php } ?>
