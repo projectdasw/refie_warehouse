@@ -5,6 +5,7 @@
     $knd = '';
     $jml = '';
     $hrg = '';
+    $desc = '';
 
     if(isset($_GET['detail-barang'])){
         $nm = $_GET['detail-barang'];
@@ -19,14 +20,15 @@
         $knd = $view_edit['kondisi'];
         $jml = $view_edit['jumlah'];
         $hrg = $view_edit['harga'];
+        $desc = $view_edit['deskripsi'];
     }
 ?>
-<div class="container kanit-regular">
-    <div class="row">
-        <div class="col-4 p-2">
+<div class="container kanit-regular p-4">
+    <div class="row g-3">
+        <div class="col-3">
             <img src="gambar-barang/<?php echo $ft; ?>" class="w-100">
         </div>
-        <div class="col-8 p-2">
+        <div class="col-6">
             <h4 class="kanit-semibold m-0">
                 <?php echo $nm; ?>
             </h4>
@@ -43,15 +45,77 @@
             <h2 class="kanit-medium mt-4 mb-4">
                 Rp. <?php echo $hrg; ?>
             </h2>
-            <h3 class="kanit-medium">
-                Detail
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Iste magni dignissimos praesentium repellendus.
-                Ipsum minima vero harum culpa debitis sit eius fugit repellat et neque,
-                quia repellendus esse cumque accusamus.
-            </p>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Detail
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <p class="m-0">
+                                <span class="text-body-secondary">Kondisi</span> : <?php echo $knd; ?>
+                            </p>
+                            <p class="m-0">
+                                <span class="text-body-secondary">Min. Pemesanan</span> : 1
+                            </p>
+                            <p class="m-0">
+                                <span class="text-body-secondary">Kategori</span> : <?php echo $cat; ?>
+                            </p>
+                            <p class="mt-3">
+                                <?php echo $desc; ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Info Penting
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Stok :
+                        <?php
+                            if($jml < 10){
+                        ?>
+                            <small class="text-warning">
+                                sisa <?php echo $jml; ?>
+                            </small>
+                        <?php
+                            }
+                            else if($jml == 0){
+                        ?>
+                            <small class="text-danger">
+                                Habis
+                            </small>
+                        <?php
+                            }
+                            else{
+                        ?>
+                            <small class="text-success">
+                                <?php echo $jml; ?>
+                            </small>
+                        <?php } ?>
+                    </h5>
+                    <p class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary"></small>
+                </div>
+            </div>
         </div>
     </div>
 </div>
