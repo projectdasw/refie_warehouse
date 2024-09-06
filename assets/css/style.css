@@ -10,6 +10,8 @@
 
 :root{
     --colorbase: #631d8b;
+    --colorcard1: #9111db;
+    --colorcard2: #ad20ff;
 }
 
 .kanit-thin {
@@ -297,6 +299,79 @@
     background-color: #33186B;
 }
 /* END OF POP UP */
+
+/* NEW CUSTOM CSS */
+.nav-img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 0 5px 0 #979696;
+}
+
+.list-style-none{
+    list-style: none;
+}
+
+.cover-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+}
+
+.main-slide .swiper-button-prev,
+.main-slide .swiper-button-next{
+    background-color: #392467;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.main-slide .swiper-button-prev::after,
+.main-slide .swiper-button-next::after{
+    font-size: 20px;
+    color: #fff;
+}
+
+.new-product .swiper-pagination{
+    position: static;
+    /* margin: 20px 0 0 0; */
+}
+
+.new-product .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.new-product .swiper-pagination-bullet-active {
+    color: #fff;
+    background-color: #392467;
+}
+
+.aside-menu .nav-link{
+    color: #000;
+}
+
+.aside-menu .nav-link:hover{
+    background-color: var(--colorbase);
+    color: #fff;
+}
+/* NEW CUSTOM CSS */
 
 /* LANDING PAGE */
 .landing-page{
@@ -1871,67 +1946,3 @@ button{
     /* END OF DASHBOARD MENU */
 }
 /* END OF RESPONSIVE BREAKPOINT */
-
-/* NEW CUSTOM CSS */
-.nav-img{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    box-shadow: 0 0 5px 0 #979696;
-}
-
-.list-style-none{
-    list-style: none;
-}
-
-.cover-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 120%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 20%;
-}
-
-.main-slide .swiper-button-prev,
-.main-slide .swiper-button-next{
-    background-color: #392467;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.main-slide .swiper-button-prev::after,
-.main-slide .swiper-button-next::after{
-    font-size: 20px;
-    color: #fff;
-}
-
-.new-product .swiper-pagination{
-    position: static;
-    /* margin: 20px 0 0 0; */
-}
-
-.new-product .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color: #000;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.new-product .swiper-pagination-bullet-active {
-    color: #fff;
-    background-color: #392467;
-}
-/* NEW CUSTOM CSS */
