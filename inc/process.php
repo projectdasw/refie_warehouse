@@ -30,7 +30,7 @@
                     $aktivitas = "<strong>$username</strong> telah melakukan aktivitas
                                 <strong>Login</strong> pada hari $tgl_login pukul $jam";
                     
-                    $query = "insert into aktivitas values('$tgl_akt', '$username','$aktivitas')";
+                    $query = "insert into aktivitas values(no, '$tgl_akt', '$username','$aktivitas')";
                     $sql = mysqli_query($conn, $query);
                     
                     header("location: ../dashboard.php");
