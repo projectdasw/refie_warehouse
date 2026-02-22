@@ -1,4 +1,4 @@
-        <footer class="landing-page-footer">
+        <!-- <footer class="landing-page-footer">
             <div class="footer-content">
                 <div class="footer-card">
                     <img class="footer-logo" src="assets/img/logo/refie_logo.png" alt="image">
@@ -34,7 +34,7 @@
                 Copyright &copy;<?php echo date("Y"); ?>.
                 REFIE Sport Fashion All Right Reserved.
             </div>
-        </footer>
+        </footer> -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"
             integrity="sha256-9kWxLyfE6cEhDVclz6iUuGRkNy57G+y+RxJqX+gvmt4="
             crossorigin="anonymous"></script>
